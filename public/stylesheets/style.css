@@ -1,3 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 body {
-  background-color: #00b7ff;
+  margin: 0;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas Neue", cursive;
+}
+h1 {
+  font-size: 7rem;
+}
+.text-container {
+  text-align: left;
+  font-size: 4.5rem;
+  padding: 0;
+  margin: 0;
+}
+.text-container p {
+  padding: 0 15px;
+  margin: 15px;
+  background-color: black;
+  color: white;
+  width: fit-content;
+}
+.small-info {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  text-align: left;
+}
+.fufako {
+  color: #ffdb58;
+  text-decoration: none;
+}
+.fufako:hover {
+  color: white;
+}
+.color {
+  color: #ffdb58;
+}
+.movies-btn {
+  margin-top: 20px;
+  width: 400px;
+  height: 93px;
+  font-size: 4.5rem;
+  background-color: black;
+  border: 0;
+  font-family: "Bebas Neue", cursive;
+  box-shadow: inset 0 0 0 0 #ffdb58;
+  color: #ffdb58;
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.movies-btn:hover {
+  box-shadow: inset 400px 0 0 0 #ffdb58;
+  color: black;
+  cursor: pointer;
 }
