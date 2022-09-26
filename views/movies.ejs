@@ -9,8 +9,19 @@
   </head>
   <body>
     <div class="main-container">
-      <h1>FilmDev</h1>
+      <h1><a href="/">FilmDev</a></h1>
       <div class="movies-container">Movies</div>
+
+      <ul>
+        <% for(movie of movies) {%>
+        <li><%= movie.title %></li>
+
+        <li><a href="<%= movie.url %>">link</a></li>
+        <% } %>
+      </ul>
+      <form action="" method="post">
+        <button name="more" value="upvote">More</button>
+      </form>
     </div>
   </body>
 </html>
