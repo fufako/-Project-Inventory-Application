@@ -13,14 +13,15 @@
         <a href="/">FilmDev</a>
       </h1>
       <div class="movies-container">Movies</div>
+      <% for(movie of movies) {%>
+      <a href="<%= movie.url %>">
+        <div class="movie">
+          <img src="<%= movie.poster %>" alt="<%= movie.title %>_poster" />
+          <p class="title"><%= movie.title %> (<%= movie.year %> )</p>
+        </div>
+      </a>
+      <% } %>
 
-      <ul>
-        <% for(movie of movies) {%>
-        <li><%= movie.title %></li>
-
-        <li><a href="<%= movie.url %>">link</a></li>
-        <% } %>
-      </ul>
       <form action="" method="post" onsubmit="return true">
         <button name="more" type="submit">More</button>
       </form>

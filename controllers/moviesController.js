@@ -8,7 +8,7 @@ let seenIds = []
 exports.movies = function (req, res, next) {
   seenMovies = []
   seenIds = []
-  Movie.find()
+  Movie.find({ poster: { $exists: true } })
     .limit(10)
     .exec(function (err, list_movies) {
       if (err) {
