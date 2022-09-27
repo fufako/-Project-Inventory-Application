@@ -30,7 +30,9 @@ exports.movies = function (req, res, next) {
 }
 
 exports.moreMovies = function (req, res, next) {
-  Movie.find({ _id: { $nin: seenIds } })
+  Movie.find({
+    $and: [{ _id: { $nin: seenIds } }, { poster: { $exists: true } }],
+  })
     .limit(10)
     .exec(function (err, list_movies) {
       if (err) {
