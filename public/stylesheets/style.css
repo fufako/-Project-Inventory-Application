@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-* {
-  outline: 1px solid red;
-}
+
 body {
   margin: 0;
 }
@@ -155,13 +153,30 @@ h1 a {
     "poster main"
     "poster main";
   width: 70%;
+  margin: 20px 0;
+  background-color: black;
+  color: white;
+  padding: 40px;
 }
 .top-panel {
   grid-area: header;
+  font-size: 2.6rem;
+  text-align: center;
 }
 .left-panel {
   grid-area: poster;
+  text-align: center;
 }
 .right-panel {
   grid-area: main;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+.plot {
+  text-align: justify;
+}
+.imdb {
+  font-size: 1.6rem;
+  text-align: right;
+  font-family: "Bebas Neue", cursive;
 }

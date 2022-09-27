@@ -11,6 +11,7 @@ const detailMovieSchema = new Schema(
     year: Number,
     cast: Array,
     directors: Array,
+    writers: Array,
   },
   {
     collection: "movies",

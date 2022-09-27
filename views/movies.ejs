@@ -61,10 +61,8 @@
         },
         false
       )
-      // Get the button:
       const upBtn = document.querySelector(".go-top")
 
-      // When the user scrolls down 20px from the top of the document, show the button
       window.onscroll = function () {
         scrollFunction()
       }
@@ -82,7 +80,7 @@
 
       function goTop() {
         document.body.scrollTop = 0 // For Safari
-        document.documentElement.scrollTop = 0
+        window.scrollTo({ top: 0, behavior: "smooth" })
       }
     </script>
   </body>

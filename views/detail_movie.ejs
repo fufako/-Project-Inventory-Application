@@ -13,20 +13,32 @@
         <a href="/">FilmDev</a>
       </h1>
       <div class="movie-details-container">
-        <div class="top-panel"><%=movie.title %> (<%=movie.year %>)</div>
+        <div class="top-panel">
+          <span class="color"><%=movie.title %> (<%=movie.year %>)</span>
+        </div>
         <div class="left-panel">
           <img
             src="<%=movie.poster %>"
             class="poster-detail"
             alt="<%=movie.title %>"
+            onerror="this.onerror=null;this.src='/images/film-poster-placeholder.png';"
           />
         </div>
         <div class="right-panel">
           <p class="plot"><%=movie.fullplot %></p>
-          <p class="directors"><%=movie.directors.join(", ") %></p>
-          <p class="cast"><%=movie.cast.join(", ") %></p>
+          <p class="directors">
+            <span class="color">Directors: </span><%=movie.directors.join(", ")
+            %>
+          </p>
+          <p class="writers">
+            <span class="color">Writers: </span> <%=movie.writers.join(", ") %>
+          </p>
+          <p class="cast">
+            <span class="color">Cast: </span> <%=movie.cast.join(", ") %>
+          </p>
           <p class="imdb">
-            <%=movie.imdb.rating %> (<%=movie.imdb.votes %> votes)
+            IMDb rating: <span class="color"><%=movie.imdb.rating %>/10</span>
+            <br />(<%=movie.imdb.votes %> votes)
           </p>
         </div>
       </div>
