@@ -19,9 +19,30 @@
         <li><a href="<%= movie.url %>">link</a></li>
         <% } %>
       </ul>
-      <form action="" method="post">
-        <button name="more" value="upvote">More</button>
+      <form action="" method="post" onsubmit="return true">
+        <button name="more" type="submit">More</button>
       </form>
     </div>
+    <script>
+      if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href)
+      }
+      window.addEventListener(
+        "scroll",
+        function () {
+          //When scroll change, you save it on localStorage.
+          localStorage.setItem("scrollPosition", window.scrollY)
+        },
+        false
+      )
+      window.addEventListener(
+        "load",
+        function () {
+          if (localStorage.getItem("scrollPosition") !== null)
+            window.scrollTo(0, localStorage.getItem("scrollPosition"))
+        },
+        false
+      )
+    </script>
   </body>
 </html>
