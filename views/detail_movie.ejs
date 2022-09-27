@@ -4,9 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>FilmDev</title>
   </head>
   <body>
-    <%=movie.title %>
+    <div class="main-container">
+      <h1>
+        <a href="/">FilmDev</a>
+      </h1>
+      <div class="movie-details-container">
+        <div class="top-panel"><%=movie.title %> (<%=movie.year %>)</div>
+        <div class="left-panel">
+          <img
+            src="<%=movie.poster %>"
+            class="poster-detail"
+            alt="<%=movie.title %>"
+          />
+        </div>
+        <div class="right-panel">
+          <p class="plot"><%=movie.fullplot %></p>
+          <p class="directors"><%=movie.directors.join(", ") %></p>
+          <p class="cast"><%=movie.cast.join(", ") %></p>
+          <p class="imdb">
+            <%=movie.imdb.rating %> (<%=movie.imdb.votes %> votes)
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

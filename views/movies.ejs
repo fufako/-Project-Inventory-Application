@@ -8,27 +8,37 @@
     <title>FilmDev</title>
   </head>
   <body>
+    <button title="Go to the top" class="go-top" onclick="goTop()">
+      <img src="/images/up.png" alt="go-up-arrow" />
+    </button>
+
     <div class="main-container">
       <h1>
         <a href="/">FilmDev</a>
       </h1>
       <div class="movies-container">
         <% for(movie of movies) {%>
-        <a href="<%= movie.url %>">
-          <div class="movie">
-            <img
-              src="<%= movie.poster %>"
-              alt="<%= movie.title %>"
-              class="poster"
-              onerror="this.onerror=null;this.src='/images/film-poster-placeholder.png';"
-            />
-            <p class="title"><%= movie.title %> (<%= movie.year %> )</p>
-          </div>
-        </a>
+
+        <div class="movie">
+          <img
+            src="<%= movie.poster %>"
+            alt="<%= movie.title %>"
+            class="poster"
+            onerror="this.onerror=null;this.src='/images/film-poster-placeholder.png';"
+          />
+          <p class="title">
+            <a href="<%= movie.url %>"
+              ><%= movie.title %> (<%= movie.year %>)</a
+            >
+          </p>
+        </div>
+
         <% } %>
       </div>
       <form action="" method="post" onsubmit="return true">
-        <button name="more" type="submit">More</button>
+        <button name="more" type="submit" class="more">
+          Display more movies
+        </button>
       </form>
     </div>
     <script>
@@ -51,6 +61,29 @@
         },
         false
       )
+      // Get the button:
+      const upBtn = document.querySelector(".go-top")
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      }
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          upBtn.style.display = "block"
+        } else {
+          upBtn.style.display = "none"
+        }
+      }
+
+      function goTop() {
+        document.body.scrollTop = 0 // For Safari
+        document.documentElement.scrollTop = 0
+      }
     </script>
   </body>
 </html>
