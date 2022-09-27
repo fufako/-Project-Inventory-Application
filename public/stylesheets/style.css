@@ -59,7 +59,7 @@ h1 a {
   text-decoration: none;
   margin-top: 20px;
   width: 400px;
-  height: 93px;
+  height: 85px;
   font-size: 4.5rem;
   background-color: black;
   border: 0;
@@ -147,7 +147,7 @@ h1 a {
   transition: background-color 0.3s ease-in-out;
 }
 .poster-detail {
-  width: 400px;
+  width: 380px;
   height: 600px;
 }
 .movie-details-container {
@@ -162,6 +162,8 @@ h1 a {
   background-color: black;
   color: white;
   padding: 40px;
+  box-shadow: 0px 0px 53px -15px rgba(66, 68, 90, 1);
+  z-index: 10;
 }
 .top-panel {
   grid-area: header;
@@ -176,6 +178,7 @@ h1 a {
   grid-area: main;
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
+  padding: 40px;
 }
 .plot {
   text-align: justify;
@@ -184,4 +187,70 @@ h1 a {
   font-size: 1.6rem;
   text-align: right;
   font-family: "Bebas Neue", cursive;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .text-container p {
+    font-size: 2rem;
+  }
+  .small-info {
+    font-size: 0.5rem;
+    text-align: right;
+    padding: 0 30px;
+  }
+  .movies-btn {
+    font-size: 1.8rem;
+    width: 60%;
+    text-align: center;
+    height: fit-content;
+  }
+  .movie img {
+    width: 120px;
+    height: 210px;
+  }
+  .title a {
+    font-size: 1rem;
+  }
+  .movie {
+    min-height: 320px;
+    max-height: 320px;
+  }
+  .movies-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 160px));
+    width: 95%;
+  }
+  .more {
+    width: 200px;
+    height: fit-content;
+    font-size: 1.5rem;
+  }
+  .go-top {
+    visibility: hidden;
+  }
+  .left-panel img {
+    width: 200px;
+    height: 300px;
+    aspect-ratio: auto;
+    grid-area: poster;
+  }
+  .movie-details-container {
+    grid-template-areas:
+      "header header"
+      "poster poster"
+      "poster poster"
+      "main main";
+    width: 90%;
+    padding: 0;
+  }
+  .top-panel {
+    grid-area: header;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  .right-panel {
+    grid-area: main;
+    font-size: 0.9rem;
+  }
 }
