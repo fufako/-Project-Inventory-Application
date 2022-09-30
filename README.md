@@ -12,7 +12,7 @@ Web app created using Node, Express and MongoDB. Where users can explore oldscho
 
 ## Live app
 
-<a href = "https://stormy-spire-23489.herokuapp.com/movies"/> Here </a>
+<a href = "https://stormy-spire-23489.herokuapp.com/"/> Here </a>
 
 ## Preview
 
