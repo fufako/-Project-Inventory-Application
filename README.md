@@ -3,11 +3,12 @@ Web app created using Node, Express and MongoDB. Where users can explore oldscho
 
 ## Features
 
-✅ Window position saved in LocalStorage
-✅ Display details about the movie
-✅ Placeholder image if movie poster is not found
-✅ Display more movies button that renders next 10 movies in the database
-
+✅ Window position saved in LocalStorage <br/>
+✅ Display details about the movie <br/>
+✅ Placeholder image if movie poster is not found <br/>
+✅ Display more movies button that renders next 10 movies in the database <br/>
+✅ Scroll up button <br/>
+ 
 
 ## Live app
 
